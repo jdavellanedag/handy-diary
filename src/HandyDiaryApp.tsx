@@ -1,39 +1,13 @@
-import { WiDayCloudy } from "react-icons/wi";
 import { FaTrashAlt, FaPlus } from "react-icons/fa";
 import { MdAddBox } from "react-icons/md";
+import { WeatherWidget } from "./layouts/WeatherWidget/WeatherWidget";
 
 import "./styles/styles.scss";
 
 export const HandyDiaryApp = () => {
   return (
     <div className="main">
-      <div className="calendar__box">
-        <div className="calendar__date">
-          <div className="calendar__date_month">
-            <p>Agosto</p>
-          </div>
-          <div className="calendar__date_days">
-            <p>01</p>
-          </div>
-          <div className="calendar__date_day">
-            <p>Lunes</p>
-          </div>
-        </div>
-        <div className="calendar__weather">
-          <div className="calendar__weather_img">
-            <WiDayCloudy size={70} />
-          </div>
-          <div className="calendar__weather_data">
-            <div className="calendar__weather_temp">
-              <p>25&deg;</p>
-            </div>
-            <div className="calendar__weather_details">
-              <p>Soleado</p>
-              <p>Bogotá, Colombia</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <WeatherWidget />
       <div className="note__box">
         <textarea rows={4} placeholder="Mi motivación del dia"></textarea>
       </div>
