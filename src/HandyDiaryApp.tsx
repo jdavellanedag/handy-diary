@@ -1,5 +1,6 @@
 import { FaTrashAlt, FaPlus } from "react-icons/fa";
-import { MdAddBox } from "react-icons/md";
+import { MdAddBox, MdOutlineLocalDrink, MdLocalDrink } from "react-icons/md";
+import { Counter } from "./layouts/Counter/Counter";
 import { WeatherWidget } from "./layouts/WeatherWidget/WeatherWidget";
 
 import "./styles/styles.scss";
@@ -8,7 +9,7 @@ export const HandyDiaryApp = () => {
   return (
     <div className="main">
       <WeatherWidget />
-      <div className="note__box">
+      <div className="idea__box">
         <textarea rows={4} placeholder="Mi motivación del dia"></textarea>
       </div>
       <div className="tasks__box">
@@ -52,29 +53,6 @@ export const HandyDiaryApp = () => {
           </li>
         </ul>
       </div>
-      <div className="tasks__box">
-        <div className="tasks__title">Top 3 prioridades</div>
-        <ol className="tasks__list top__list">
-          <li className="tasks__task">
-            <p>Nulla in amet voluptate proident laborum occaecat amet culpa duis.</p>
-            <button className="delete">
-              <FaTrashAlt />
-            </button>
-          </li>
-          <li className="tasks__task">
-            <p>Nulla in amet voluptate proident laborum occaecat amet culpa duis.</p>
-            <button className="delete">
-              <FaTrashAlt />
-            </button>
-          </li>
-          <li className="tasks__task">
-            <p>Nulla in amet voluptate proident laborum occaecat amet culpa duis.</p>
-            <button className="delete">
-              <FaTrashAlt />
-            </button>
-          </li>
-        </ol>
-      </div>
       <div className="skd__box">
         <div className="skd__title">Citas</div>
         <div className="skd__content">
@@ -98,8 +76,19 @@ export const HandyDiaryApp = () => {
           <MdAddBox size={40} color={"white"} />
         </button>
       </div>
-      <div>Notas</div>
-      <div>Contador de agua</div>
+      <div className="note__box">
+        <div className="note__title">
+          <h3>Notas</h3>
+        </div>
+        <div className="note">
+          <h3>
+            <input placeholder="Titulo" type={"text"} className="note-title" />
+          </h3>
+          <textarea placeholder="Escribe..." className="note-data" />
+        </div>
+      </div>
+      <Counter />
+      <footer></footer>
     </div>
   );
 };

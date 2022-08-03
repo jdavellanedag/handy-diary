@@ -1,0 +1,23 @@
+.counter__box {
+  margin: 1rem 2rem;
+  font-size: 4vw;
+}
+
+.counter__title {
+  margin: 1rem 0;
+  font-weight: bold;
+  color: rgb(85, 76, 76);
+}
+
+.counter__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drinked {
+  color: #146fa3;
+}
+
+.undrinked {
+  color: rgba(139, 133, 133, 0.623);
+}
